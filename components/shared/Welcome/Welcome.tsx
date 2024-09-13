@@ -8,6 +8,7 @@ import {
     welcome_tab_2x,
 } from '@/public/images/welcome';
 import Logo from '../Logo';
+import Link from 'next/link';
 
 const Welcome = () => {
     return (
@@ -34,6 +35,11 @@ const Welcome = () => {
                         Supercharge your productivity and take control of your tasks with Task Pro -
                         Don&apos;t wait, start achieving your goals now!
                     </p>
+
+                    <div className={scss.links}>
+                        <Link href="/auth/register">Registration</Link>
+                        <Link href="/auth/login">Login</Link>
+                    </div>
                 </div>
             </Container>
         </BackgroundColorWrapper>
