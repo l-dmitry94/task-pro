@@ -3,9 +3,14 @@ import React, { FC } from 'react';
 import AuthNav from './AuthNav';
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
+import BackgroundColorWrapper from '../BackgroundColorWrapper';
 
 const Auth: FC<IAuthPage> = ({ params }) => {
-    return <AuthNav>{params.id === 'register' ? <RegisterForm /> : <LoginForm />}</AuthNav>;
+    return (
+        <BackgroundColorWrapper>
+            <AuthNav>{params.id === 'register' ? <RegisterForm /> : <LoginForm />}</AuthNav>
+        </BackgroundColorWrapper>
+    );
 };
 
 export default Auth;

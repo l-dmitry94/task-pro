@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .logo {
     @apply flex items-center;
 
@@ -6,14 +8,26 @@
 
         & .iconWrapper {
             @apply h-10 w-10 bg-black-161616;
+
+            @include media-rules(tablet) {
+                @apply h-12 w-12;
+            }
         }
 
         & .icon {
             @apply h-5 w-4;
+
+            @include media-rules(tablet) {
+                @apply h-6 w-5;
+            }
         }
 
         & .title {
             @apply text-[1.75rem] text-black-161616;
+
+            @include media-rules(tablet) {
+                @apply text-[2.5rem];
+            }
         }
     }
 

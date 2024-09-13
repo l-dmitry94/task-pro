@@ -1,5 +1,18 @@
+@import "styles/mixins";
+
+.wrapper {
+    
+    @include media-rules(tablet) {
+        @apply max-w-[474px];
+    }
+}
+
 .image {
     @apply mx-auto mb-[14px];
+
+    @include media-rules(tablet) {
+        @apply mb-6;
+    }
 }
 
 .logo {
@@ -7,5 +20,33 @@
 }
 
 .description {
-    @apply text-center text-sm leading-tight tracking-tight text-black-161616 mb-12;
+    @apply mb-12 text-center text-sm leading-tight tracking-tight text-black-161616;
+}
+
+.links {
+    @apply flex flex-col gap-[14px];
+
+    @include media-rules(tablet) {
+        @apply max-w-[344px] mx-auto;
+    }
+}
+
+.link {
+    @apply text-center text-sm font-medium tracking-tight transition-colors duration-150 ease-linear;
+
+    &.register {
+        @apply rounded-lg bg-black-161616 py-[14px] text-white;
+
+        &:hover {
+            @apply bg-green-dark text-black-161616;
+        }
+    }
+
+    &.login {
+        @apply inline-block;
+
+        &:hover {
+            @apply text-green-dark;
+        }
+    }
 }

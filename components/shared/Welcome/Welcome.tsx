@@ -1,14 +1,15 @@
+import Link from 'next/link';
+import clsx from 'clsx';
 import Container from '@/components/ui/Container';
 import BackgroundColorWrapper from '../BackgroundColorWrapper';
-import scss from './Welcome.module.scss';
+import Logo from '../Logo';
 import {
     welcome_mob_1x,
     welcome_mob_2x,
     welcome_tab_1x,
     welcome_tab_2x,
 } from '@/public/images/welcome';
-import Logo from '../Logo';
-import Link from 'next/link';
+import scss from './Welcome.module.scss';
 
 const Welcome = () => {
     return (
@@ -37,8 +38,12 @@ const Welcome = () => {
                     </p>
 
                     <div className={scss.links}>
-                        <Link href="/auth/register">Registration</Link>
-                        <Link href="/auth/login">Login</Link>
+                        <Link href="/auth/register" className={clsx(scss.link, scss.register)}>
+                            Registration
+                        </Link>
+                        <Link href="/auth/login" className={clsx(scss.link, scss.login)}>
+                            Log In
+                        </Link>
                     </div>
                 </div>
             </Container>
