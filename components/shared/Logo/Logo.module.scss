@@ -1,0 +1,47 @@
+.logo {
+    @apply flex items-center;
+
+    &.welcome {
+        @apply gap-[14px] justify-center;
+
+        & .iconWrapper {
+            @apply h-10 w-10 bg-black-161616;
+        }
+
+        & .icon {
+            @apply h-5 w-4;
+        }
+
+        & .title {
+            @apply text-[1.75rem] text-black-161616;
+        }
+    }
+
+    &.dashboard {
+        @apply gap-2;
+
+        & .iconWrapper {
+            @apply h-8 w-8 bg-black-1f1f1f;
+        }
+
+        & .icon {
+            @apply h-4 w-3;
+        }
+
+        & .title {
+            @apply text-base leading-none text-white;
+        }
+    }
+}
+
+.iconWrapper {
+    @apply flex items-center justify-center rounded-lg;
+}
+
+.icon {
+    @apply fill-white;
+}
+
+.title {
+    @apply font-semibold tracking-[-0.04em];
+}

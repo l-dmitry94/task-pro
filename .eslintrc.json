@@ -9,7 +9,7 @@
     ],
     "ignorePatterns": ["dist", ".eslintrc.cjs"],
     "parser": "@typescript-eslint/parser",
-    "plugins": ["react-refresh", "simple-import-sort"],
+    "plugins": ["react-refresh"],
     "rules": {
         "max-lines": [
             "warn",

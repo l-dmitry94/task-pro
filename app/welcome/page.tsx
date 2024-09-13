@@ -1,5 +1,7 @@
+import Welcome from '@/components/shared/Welcome';
+
 const WelcomePage = () => {
-    return <div>WelcomePage</div>;
+    return <Welcome />;
 };
 
 export default WelcomePage;

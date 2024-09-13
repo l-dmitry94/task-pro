@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
 const StartPage = () => {
-    redirect("/welcome");
+    redirect('/welcome');
 };
 
 export default StartPage;
