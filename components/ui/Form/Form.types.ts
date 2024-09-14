@@ -3,7 +3,11 @@ import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 import { ObjectSchema } from 'yup';
 
 export interface IForm<T extends FieldValues> {
-    children: (register: UseFormRegister<T>, errors: FieldErrors<T>) => ReactNode;
+    children: (
+        register: UseFormRegister<T>,
+        errors: FieldErrors<T>,
+        isSubmitting: boolean
+    ) => ReactNode;
     onSubmit: (data: T) => void;
     validationSchema: ObjectSchema<any>;
 }

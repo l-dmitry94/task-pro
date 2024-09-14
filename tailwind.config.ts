@@ -15,7 +15,6 @@ const config: Config = {
                     DEFAULT: '#bedbb0',
                     dark: '#9dc888',
                 },
-                gray: '#bedbb0',
             },
             letterSpacing: {
                 tight: '-0.02em',
