@@ -32,6 +32,9 @@ const config: Config = {
                 'gradient-linear':
                     'linear-gradient(180deg, rgba(196, 196, 196, 0) 25%, #bedbb0 92.19%)',
             },
+            boxShadow: {
+                custom: '0 4px 16px 0 rgba(22, 22, 22, 0.08)',
+            },
         },
     },
     plugins: [],

@@ -1,0 +1,27 @@
+.wrapper {
+    @apply relative;
+}
+
+.inputWrapper {
+    @apply relative;
+
+    & .icon {
+        @apply h-[18px] w-[18px] stroke-white/40 fill-none;
+    }
+}
+
+.input {
+    @apply shadow-custom h-12 w-full rounded-lg border border-green/40 bg-black-1f1f1f px-[18px] text-sm leading-none tracking-tight text-white outline-none transition-colors duration-150 ease-linear;
+
+    &:focus {
+        @apply border-green;
+    }
+}
+
+.passwordButton {
+    @apply absolute top-1/2 right-[18px] -translate-y-1/2;
+}
+
+.error {
+    @apply absolute right-2 top-0 text-xs text-red-500;
+}

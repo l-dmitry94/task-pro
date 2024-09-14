@@ -1,0 +1,11 @@
+.linksList {
+    @apply mb-10 flex items-center gap-[14px];
+}
+
+.link {
+    @apply text-lg font-medium leading-none tracking-tight text-white/30;
+
+    &.active {
+        @apply text-white;
+    }
+}

@@ -1,0 +1,27 @@
+.button {
+    @apply flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-green text-sm font-medium leading-none tracking-tight text-black-161616 transition-colors duration-150 ease-linear;
+
+    &:hover {
+        @apply bg-green-dark;
+    }
+
+    &.tertiary {
+        @apply bg-black-121212 text-white;
+
+        & .iconWrapper {
+            @apply bg-white;
+        }
+
+        .icon {
+            @apply stroke-black-121212;
+        }
+    }
+}
+
+.iconWrapper {
+    @apply flex h-7 w-7 items-center justify-center rounded-md bg-black-161616;
+}
+
+.icon {
+    @apply h-[14px] w-[14px] stroke-white;
+}

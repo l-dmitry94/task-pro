@@ -1,5 +1,5 @@
-import { IAuthPage } from '@/app/auth/[id]/page';
 import React, { FC } from 'react';
+import { IAuthPage } from '@/app/auth/[id]/page';
 import AuthNav from './AuthNav';
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
