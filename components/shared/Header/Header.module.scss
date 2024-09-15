@@ -1,0 +1,15 @@
+.header {
+    @apply bg-black-161616 py-[0.875rem];
+}
+
+.wrapper {
+    @apply flex items-center justify-between;
+}
+
+.burgerIcon {
+    @apply stroke-white;
+}
+
+.userInfo {
+    @apply flex items-center gap-[0.875rem];
+}

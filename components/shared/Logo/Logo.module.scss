@@ -4,7 +4,7 @@
     @apply flex items-center;
 
     &.welcome {
-        @apply gap-[14px] justify-center;
+        @apply gap-[0.875rem] justify-center;
 
         & .iconWrapper {
             @apply h-10 w-10 bg-black-161616;
