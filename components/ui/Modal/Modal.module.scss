@@ -16,7 +16,7 @@
     @apply relative w-full max-w-[335px] translate-y-12 rounded-lg bg-black-151515 p-6 outline-none transition-transform duration-150 ease-linear;
 
     @include media-rules(tablet) {
-        @apply max-w-[400px]
+        @apply max-w-[400px];
     }
 
     &:global(.ReactModal__Content--after-open) {
@@ -41,5 +41,5 @@
 }
 
 .title {
-    @apply text-[1.125rem] font-medium tracking-tight text-white mb-6;
+    @apply mb-6 text-[1.125rem] font-medium tracking-tight text-white;
 }
