@@ -1,9 +1,9 @@
 import { FC, ReactNode } from 'react';
-import type { Metadata } from 'next';
 import { ToastContainer } from 'react-toastify';
+import type { Metadata } from 'next';
 import Providers from './providers';
 import poppins from '@/constants/fonts';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
@@ -23,15 +23,17 @@ const RootLayout: FC<IRootLayout> = ({ children }) => {
     return (
         <html lang="en">
             <body className={poppins.className}>
-                <Providers>{children}</Providers>
-                <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    closeOnClick
-                    draggable
-                    theme="colored"
-                    limit={1}
-                />
+                <Providers>
+                    {children}
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        closeOnClick
+                        draggable
+                        theme="colored"
+                        limit={1}
+                    />
+                </Providers>
             </body>
         </html>
     );

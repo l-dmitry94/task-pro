@@ -1,11 +1,19 @@
-'use client';
+import { FC } from 'react';
+import Header from '../Header';
+// import Sidebar from '../Sidebar';
+import { IHome } from './Home.types';
+import scss from './Home.module.scss';
 
-import { useSession } from 'next-auth/react';
-
-const Home = () => {
-    const { data: session } = useSession();
-    console.log(session);
-    return <div>Home</div>;
+const Home: FC<IHome> = ({ children }) => {
+    return (
+        <section className={scss.wrapper}>
+            {/* <Sidebar /> */}
+            <section>
+                <Header />
+                {children}
+            </section>
+        </section>
+    );
 };
 
 export default Home;

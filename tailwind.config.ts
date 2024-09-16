@@ -33,6 +33,7 @@ const config: Config = {
             },
             boxShadow: {
                 custom: '0 4px 16px 0 rgba(22, 22, 22, 0.08)',
+                select: '0 4px 16px 0 rgba(17, 17, 17, 0.1)',
             },
         },
     },

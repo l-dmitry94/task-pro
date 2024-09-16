@@ -8,7 +8,7 @@
 }
 
 .image {
-    @apply mx-auto mb-[14px];
+    @apply mx-auto mb-[0.875rem];
 
     @include media-rules(tablet) {
         @apply mb-6;
@@ -24,7 +24,7 @@
 }
 
 .links {
-    @apply flex flex-col gap-[14px];
+    @apply flex flex-col gap-[0.875rem];
 
     @include media-rules(tablet) {
         @apply max-w-[344px] mx-auto;
@@ -35,7 +35,7 @@
     @apply text-center text-sm font-medium tracking-tight transition-colors duration-150 ease-linear;
 
     &.register {
-        @apply rounded-lg bg-black-161616 py-[14px] text-white;
+        @apply rounded-lg bg-black-161616 py-[0.875rem] text-white;
 
         &:hover {
             @apply bg-green-dark text-black-161616;

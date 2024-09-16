@@ -1,0 +1,43 @@
+.theme-select-container {
+    @apply text-sm text-white;
+
+    & .theme-select {
+        &__control {
+            @apply min-h-6 cursor-pointer gap-1;
+        }
+
+        &__value-container {
+            @apply flex;
+        }
+
+        &__single-value {
+            @apply font-medium tracking-tight text-white/80;
+        }
+
+        &__indicator {
+            & svg {
+                @apply h-4 w-4 fill-white/80;
+            }
+        }
+
+        &__placeholder {
+            @apply text-white/80;
+        }
+
+        &__menu {
+            @apply right-0 top-[calc(100%+0.5rem)] w-auto;
+        }
+
+        &__menu-list {
+            @apply flex flex-col gap-1 rounded-lg border border-green bg-black-151515 py-[1.125rem] pl-[1.125rem] pr-11 shadow-select;
+        }
+
+        &__option {
+            @apply cursor-pointer leading-none tracking-tight text-white/50;
+
+            &--is-selected {
+                @apply text-green;
+            }
+        }
+    }
+}

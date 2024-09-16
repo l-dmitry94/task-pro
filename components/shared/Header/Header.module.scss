@@ -1,0 +1,27 @@
+@import 'styles/mixins';
+
+.header {
+    @apply bg-black-161616 py-[0.875rem];
+}
+
+.wrapper {
+    @apply flex items-center justify-between;
+}
+
+.burgerButton {
+    @include media-rules(desktop) {
+        @apply hidden;
+    }
+}
+
+.burgerIcon {
+    @apply stroke-white;
+}
+
+.userInfo {
+    @apply flex items-center gap-[0.875rem];
+
+    @include media-rules(desktop) {
+        @apply ml-auto;
+    }
+}
