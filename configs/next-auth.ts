@@ -30,7 +30,15 @@ const authOptions: NextAuthOptions = {
     ],
 
     callbacks: {
-        async jwt({ token, user }) {
+        async jwt({ token, user, trigger, session }) {
+            if (trigger === 'update' && session?.email) {
+                token.name = session.name;
+                token.email = session.email;
+                token.picture = session.image;
+                token.theme = session.theme;
+                token.id = session.id;
+            }
+
             if (user) {
                 token.id = user.id;
                 token.theme = user.theme;

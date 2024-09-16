@@ -1,9 +1,9 @@
 import { FieldValues, Path, PathValue } from 'react-hook-form';
-import scss from './UserData.module.scss';
-import { IUserData } from './UserData.types';
-import fields from './fields';
-import Input from '@/components/ui/Input';
 import { useEffect } from 'react';
+import Input from '@/components/ui/Input';
+import fields from './fields';
+import { IUserData } from './UserData.types';
+import scss from './UserData.module.scss';
 
 const UserData = <T extends FieldValues>({ user, register, errors, setValue }: IUserData<T>) => {
     useEffect(() => {

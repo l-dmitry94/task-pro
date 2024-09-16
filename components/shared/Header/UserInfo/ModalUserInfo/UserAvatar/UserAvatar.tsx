@@ -39,7 +39,7 @@ const UserAvatar = <T extends FieldValues>({ id, image, setValue }: IUserAvatar<
                         alt="User image"
                         width={68}
                         height={68}
-                        className={clsx(scss.image, defaultUser && scss.imageDefault)}
+                        className={clsx(scss.image, !avatar && scss.imageDefault)}
                     />
                 </div>
                 <CldUploadButton

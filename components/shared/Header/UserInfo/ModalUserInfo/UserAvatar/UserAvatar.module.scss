@@ -7,15 +7,15 @@
 }
 
 .imageWrapper {
-    @apply bg-black-1f1f1f rounded-lg;
-
-    &.imageDefault {
-        @apply flex items-end justify-center;
-    }
+    @apply bg-black-1f1f1f rounded-lg flex items-end justify-center w-[68px] h-[68px];
 }
 
 .image {
-    @apply rounded-lg;
+    @apply rounded-lg w-full h-full;
+}
+
+.imageDefault {
+    @apply w-14 h-12 rounded-none
 }
 
 .button {
