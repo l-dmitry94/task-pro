@@ -1,0 +1,15 @@
+.button {
+    @apply flex items-center gap-2;
+}
+
+.name {
+    @apply text-sm font-medium tracking-tight text-white;
+}
+
+.imageWrapper {
+    @apply h-8 w-8 rounded-lg bg-black-1f1f1f overflow-hidden;
+}
+
+.image {
+    @apply h-8 w-8;
+}

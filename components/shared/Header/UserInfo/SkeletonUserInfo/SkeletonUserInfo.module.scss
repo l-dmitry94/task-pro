@@ -1,0 +1,11 @@
+.wrapper {
+    @apply flex items-center gap-2 leading-none;
+}
+
+.skeletonText {
+    @apply h-5 w-[5rem];
+}
+
+.skeletonImage {
+    @apply w-8 h-8 rounded-lg
+}

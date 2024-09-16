@@ -16,7 +16,7 @@
 
         &__indicator {
             & svg {
-                @apply h-4 w-4;
+                @apply h-4 w-4 fill-white/80;
             }
         }
 
@@ -29,16 +29,15 @@
         }
 
         &__menu-list {
-            @apply shadow-select rounded-lg border border-green bg-black-151515 py-[1.125rem] pl-[1.125rem] pr-11 flex flex-col gap-1;
+            @apply flex flex-col gap-1 rounded-lg border border-green bg-black-151515 py-[1.125rem] pl-[1.125rem] pr-11 shadow-select;
         }
 
         &__option {
-            @apply leading-none tracking-tight text-white/50 cursor-pointer;
+            @apply cursor-pointer leading-none tracking-tight text-white/50;
 
             &--is-selected {
                 @apply text-green;
             }
         }
-
     }
 }

@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import Select, { SingleValue } from 'react-select';
 import options from './options';
 import { IOption, IThemeSelect } from './ThemeSelect.types';
+import SkeletonThemeSelect from './SkeletonThemeSelect';
 
 const ThemeSelect: FC<IThemeSelect> = ({ theme }) => {
     const [selectedOption, setSelectedOption] = useState<SingleValue<IOption>>(null);
@@ -12,6 +13,8 @@ const ThemeSelect: FC<IThemeSelect> = ({ theme }) => {
             if (defaultOption) setSelectedOption(defaultOption);
         }
     }, [theme]);
+
+    if (!theme) return <SkeletonThemeSelect />;
 
     return (
         <Select

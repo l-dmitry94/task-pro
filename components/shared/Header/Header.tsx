@@ -17,9 +17,10 @@ const Header = () => {
                     <button className={scss.burgerButton}>
                         <Icon variant="menu" className={scss.burgerIcon} />
                     </button>
+
                     <div className={scss.userInfo}>
                         <ThemeSelect theme={session?.user?.theme} />
-                        <UserInfo />
+                        <UserInfo user={session?.user} />
                     </div>
                 </div>
             </Container>
