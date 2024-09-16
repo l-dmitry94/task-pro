@@ -9,6 +9,8 @@
 }
 
 .burgerButton {
+    @apply outline-none;
+    
     @include media-rules(desktop) {
         @apply hidden;
     }

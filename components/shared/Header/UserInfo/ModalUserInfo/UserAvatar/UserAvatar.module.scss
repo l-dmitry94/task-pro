@@ -1,0 +1,31 @@
+.wrapper {
+    @apply mb-6 flex items-center justify-center;
+}
+
+.imageContainer {
+    @apply relative;
+}
+
+.imageWrapper {
+    @apply bg-black-1f1f1f rounded-lg;
+
+    &.imageDefault {
+        @apply flex items-end justify-center;
+    }
+}
+
+.image {
+    @apply rounded-lg;
+}
+
+.button {
+    @apply absolute -bottom-3 left-1/2 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-md bg-green transition-colors duration-150 ease-linear;
+
+    &:hover {
+        @apply bg-green-dark;
+    }
+
+    & .icon {
+        @apply h-[0.625rem] w-[0.625rem] stroke-black-161616;
+    }
+}

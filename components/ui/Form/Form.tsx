@@ -7,12 +7,15 @@ const Form = <T extends FieldValues>({ onSubmit, validationSchema, children }: I
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
+        setValue,
     } = useForm<T>({
-        resolver: yupResolver(validationSchema),
+        resolver: validationSchema ? yupResolver(validationSchema) : undefined,
     });
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>{children(register, errors, isSubmitting)}</form>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            {children(register, errors, isSubmitting, setValue)}
+        </form>
     );
 };
 
