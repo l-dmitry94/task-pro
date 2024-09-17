@@ -27,7 +27,8 @@ const RootLayout: FC<IRootLayout> = ({ children }) => {
                     {children}
                     <ToastContainer
                         position="top-right"
-                        autoClose={5000}
+                        autoClose={3000}
+                        hideProgressBar
                         closeOnClick
                         draggable
                         theme="colored"

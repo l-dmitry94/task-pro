@@ -1,0 +1,13 @@
+.simpleBar {
+    @apply cursor-auto;
+
+    :global(.simplebar-track) {
+        @apply pointer-events-auto -right-4 w-3;
+    }
+
+    :global(.simplebar-scrollbar) {
+        &::before {
+            @apply bg-green/50 opacity-100;
+        }
+    }
+}

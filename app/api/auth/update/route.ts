@@ -26,5 +26,5 @@ export const PUT = async (req: NextRequest) => {
         data: updatedData,
     });
 
-    return NextResponse.json(updatedUser);
+    return NextResponse.json(updatedUser, { status: 200 });
 };

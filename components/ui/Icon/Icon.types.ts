@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-type IconVariants =
+export type IconVariants =
     | 'menu'
     | 'arrow'
     | 'bell'
@@ -21,7 +21,8 @@ type IconVariants =
     | 'puzzle'
     | 'star'
     | 'trash'
-    | 'user';
+    | 'user'
+    | 'logout';
 
 export interface IIcon extends SVGProps<SVGSVGElement> {
     variant: IconVariants;

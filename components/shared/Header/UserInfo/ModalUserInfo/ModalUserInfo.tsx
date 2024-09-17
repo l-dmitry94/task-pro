@@ -8,13 +8,23 @@ import UserData from './UserData';
 import scss from './ModalUserInfo.module.scss';
 import { update } from '@/api/auth.api';
 import { useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
+import { IModalUserInfo } from './ModalUserInfo.types';
 
-const ModalUserInfo: FC<User> = ({ id, name, email, image }) => {
+const ModalUserInfo: FC<IModalUserInfo> = ({ id, name, email, image, onClose }) => {
     const { update: updateSession } = useSession();
     const handleSubmit = async (data: User) => {
-        const response = await update(data);
+        try {
+            const response = await update(data);
 
-        updateSession(response.data);
+            if (response.status === 200) {
+                updateSession(response.data);
+                toast.success('User updated successfully');
+                onClose();
+            }
+        } catch (error: any) {
+            toast.error(error.response.data.message);
+        }
     };
 
     return (

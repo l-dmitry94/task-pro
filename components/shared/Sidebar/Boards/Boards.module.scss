@@ -1,0 +1,59 @@
+.boards {
+    @apply mb-[116px];
+
+    & .boardsScrollBar {
+        :global(.simplebar-track) {
+            @apply pointer-events-auto right-1 w-2;
+        }
+
+        :global(.simplebar-scrollbar) {
+            &::before {
+                @apply bg-green/50 opacity-100;
+            }
+        }
+    }
+}
+
+.board {
+    @apply flex items-center justify-between px-[0.875rem];
+
+    &.active {
+        @apply relative bg-black-1f1f1f/40;
+
+        &::after {
+            @apply absolute right-0 top-0 h-full w-1 rounded-s-[4px] bg-green content-[''];
+        }
+    }
+}
+
+.wrapper {
+    @apply flex select-none items-center gap-1 py-5;
+}
+
+.icon {
+    @apply fill-none stroke-white/50;
+
+    &.active {
+        @apply stroke-white;
+    }
+}
+
+.title {
+    @apply w-[120px] overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium tracking-tight text-white/50;
+
+    &.active {
+        @apply text-white;
+    }
+}
+
+.controlsButtons {
+    @apply flex items-center gap-2;
+
+    &.controlsButtonsHidden {
+        @apply hidden;
+    }
+
+    .controlIcon {
+        @apply h-4 w-4 fill-none stroke-white/50;
+    }
+}
