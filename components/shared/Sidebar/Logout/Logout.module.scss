@@ -1,0 +1,21 @@
+.logoutButton {
+    @apply flex items-center gap-[0.875rem];
+
+    &:hover {
+        & .logoutIcon {
+            @apply stroke-green-dark;
+        }
+
+        & .logoutText {
+            @apply text-green-dark;
+        }
+    }
+
+    & .logoutIcon {
+        @apply h-8 w-8 fill-none stroke-green transition-colors duration-150 ease-linear;
+    }
+}
+
+.logoutText {
+    @apply text-sm font-medium text-white transition-colors duration-150 ease-linear;
+}

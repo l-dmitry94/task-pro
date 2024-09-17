@@ -11,11 +11,11 @@
 }
 
 .image {
-    @apply rounded-lg w-full h-full;
+    @apply rounded-lg w-full h-full object-cover object-top;
 }
 
 .imageDefault {
-    @apply w-14 h-12 rounded-none
+    @apply w-14 h-12 rounded-none object-contain object-center;
 }
 
 .button {

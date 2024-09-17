@@ -6,6 +6,7 @@ import Modal from '@/components/ui/Modal';
 import { defaultUser } from '@/public/images/user';
 import { IUserInfo } from './UserInfo.types';
 import scss from './UserInfo.module.scss';
+import clsx from 'clsx';
 
 const UserInfo: FC<IUserInfo> = ({ user }) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -29,16 +30,15 @@ const UserInfo: FC<IUserInfo> = ({ user }) => {
                     <Image
                         src={user?.image || defaultUser.src}
                         alt="User image"
-                        width={32}
-                        height={32}
-                        priority
-                        className={scss.image}
+                        width={68}
+                        height={68}
+                        className={clsx(scss.image, !user?.image && scss.imageDefault)}
                     />
                 </div>
             </button>
 
             <Modal isOpen={modalIsOpen} onClose={closeModal} title="Edit profile">
-                <ModalUserInfo {...user} />
+                <ModalUserInfo {...user} onClose={closeModal} />
             </Modal>
         </>
     );

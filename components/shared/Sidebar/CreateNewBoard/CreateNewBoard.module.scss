@@ -1,0 +1,32 @@
+.createNewBoard {
+    @apply mt-[70px] mb-10;
+}
+
+.label {
+    @apply mb-2 text-sm tracking-tight text-white/50;
+}
+
+.lines {
+    @apply flex flex-col gap-4;
+
+    &::before,
+    &::after {
+        @apply h-[1px] w-full bg-white/10 content-[''];
+    }
+}
+
+.wrapper {
+    @apply flex items-center justify-between;
+}
+
+.title {
+    @apply w-20 text-sm font-medium tracking-tight text-white;
+}
+
+.button {
+    @apply h-9 w-10;
+
+    .icon {
+        @apply h-5 w-5 stroke-black-121212;
+    }
+}

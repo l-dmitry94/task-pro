@@ -7,9 +7,13 @@
 }
 
 .imageWrapper {
-    @apply h-8 w-8 rounded-lg bg-black-1f1f1f overflow-hidden;
+    @apply flex h-8 w-8 items-end justify-center rounded-lg bg-black-1f1f1f;
 }
 
 .image {
-    @apply h-8 w-8;
+    @apply h-full w-full rounded-lg object-cover object-top;
+}
+
+.imageDefault {
+    @apply h-5 w-7 rounded-none object-contain object-center;
 }

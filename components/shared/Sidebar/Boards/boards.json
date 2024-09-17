@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Project office",
+        "icon": "project",
+        "background": "9"
+    },
+    {
+        "id": "2",
+        "name": "Neon Light Project",
+        "icon": "puzzle",
+        "background": "2"
+    },
+    {
+        "id": "3",
+        "name": "Neon Light Project Skyrim",
+        "icon": "puzzle",
+        "background": "2"
+    },
+    {
+        "id": "4",
+        "name": "Neon Light Project Skyrim",
+        "icon": "puzzle",
+        "background": "7"
+    }
+]

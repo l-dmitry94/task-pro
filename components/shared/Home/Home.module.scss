@@ -1,3 +1,7 @@
 .wrapper {
-    @apply h-screen bg-black-1f1f1f;
+    @apply bg-black-1f1f1f flex h-screen -z-50;
+}
+
+.content {
+    @apply flex-1 h-full;
 }
