@@ -1,13 +1,12 @@
 .wrapper {
-    @apply bg-black-1f1f1f flex h-screen -z-50;
+    @apply -z-50 flex bg-black-1f1f1f;
+    height: calc(var(--vh, 1vh) * 100);
 
     .drawer {
-        @apply bg-black-121212 h-full;
+        @apply h-full bg-black-121212;
     }
 }
 
-
-
 .content {
-    @apply flex-1 h-full;
+    @apply h-full flex-1;
 }
