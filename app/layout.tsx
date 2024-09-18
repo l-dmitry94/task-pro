@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import clsx from 'clsx';
 import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 import Providers from './providers';
@@ -22,7 +23,7 @@ interface IRootLayout {
 const RootLayout: FC<IRootLayout> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={poppins.className}>
+            <body className={clsx(poppins.className, 'overflow-y-hidden')}>
                 <Providers>
                     {children}
                     <ToastContainer
