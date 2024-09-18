@@ -1,7 +1,11 @@
 @import 'styles/mixins';
 
 .header {
-    @apply bg-black-161616 py-[0.875rem]  ;
+    @apply bg-black-161616 py-[0.875rem];
+
+    & .container {
+        @apply max-w-screen-desktop
+    }
 }
 
 .wrapper {

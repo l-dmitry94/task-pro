@@ -1,17 +1,5 @@
 .boards {
     @apply mb-[116px];
-
-    & .boardsScrollBar {
-        :global(.simplebar-track) {
-            @apply pointer-events-auto right-1 w-2;
-        }
-
-        :global(.simplebar-scrollbar) {
-            &::before {
-                @apply bg-green/50 opacity-100;
-            }
-        }
-    }
 }
 
 .board {

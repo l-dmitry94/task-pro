@@ -1,5 +1,6 @@
 'use client';
 
+import { FC } from 'react';
 import { useSession } from 'next-auth/react';
 import Container from '@/components/ui/Container';
 import Icon from '@/components/ui/Icon';
@@ -7,14 +8,14 @@ import ThemeSelect from './ThemeSelect';
 import UserInfo from './UserInfo';
 import scss from './Header.module.scss';
 
-const Header = () => {
+const Header: FC = ({ toggleSidebar }) => {
     const { data: session } = useSession();
 
     return (
         <header className={scss.header}>
-            <Container>
+            <Container className={scss.container}>
                 <div className={scss.wrapper}>
-                    <button className={scss.burgerButton}>
+                    <button onClick={toggleSidebar} className={scss.burgerButton}>
                         <Icon variant="menu" className={scss.burgerIcon} />
                     </button>
 
