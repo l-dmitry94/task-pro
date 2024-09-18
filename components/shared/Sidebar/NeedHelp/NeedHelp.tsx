@@ -6,12 +6,14 @@ import scss from './NeedHelp.module.scss';
 const NeedHelp = () => {
     return (
         <section className={scss.needHelp}>
-            <Image src={help} width={54} height={78} alt="Need help" className={scss.image} />
+            <div className={scss.hiddenWrapper}>
+                <Image src={help} width={54} height={78} alt="Need help" className={scss.image} />
 
-            <p className={scss.text}>
-                If you need help with <span className={scss.textGreen}>TaskPro</span>, check out our
-                support resources or reach out to our customer support team.
-            </p>
+                <p className={scss.text}>
+                    If you need help with <span className={scss.textGreen}>TaskPro</span>, check out
+                    our support resources or reach out to our customer support team.
+                </p>
+            </div>
 
             <button type="button" className={scss.helpButton}>
                 <Icon variant="help" className={scss.helpIcon} />

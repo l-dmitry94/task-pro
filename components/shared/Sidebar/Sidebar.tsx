@@ -1,4 +1,3 @@
-import ScrollBar from '@/components/ui/ScrollBar';
 import Logo from '../Logo';
 import Boards from './Boards';
 import CreateNewBoard from './CreateNewBoard';
@@ -8,25 +7,23 @@ import scss from './Sidebar.module.scss';
 
 const Sidebar = () => {
     return (
-        <ScrollBar maxHeight={'100vh'}>
-            <aside className={scss.sidebar}>
-                <div className={scss.container}>
-                    <div className={scss.wrapper}>
-                        <Logo variant="dashboard" />
-                        <CreateNewBoard />
-                    </div>
-
-                    <Boards />
+        <aside className={scss.sidebar}>
+            <div className={scss.container}>
+                <div className={scss.wrapper}>
+                    <Logo variant="dashboard" />
+                    <CreateNewBoard />
                 </div>
 
-                <div className={scss.container}>
-                    <div className={scss.wrapper}>
-                        <NeedHelp />
-                        <Logout />
-                    </div>
+                <Boards />
+            </div>
+
+            <div className={scss.container}>
+                <div className={scss.wrapper}>
+                    <NeedHelp />
+                    <Logout />
                 </div>
-            </aside>
-        </ScrollBar>
+            </div>
+        </aside>
     );
 };
 

@@ -13,14 +13,8 @@
     },
     {
         "id": "3",
-        "name": "Neon Light Project Skyrim",
+        "name": "Neon Light Project",
         "icon": "puzzle",
-        "background": "2"
-    },
-    {
-        "id": "4",
-        "name": "Neon Light Project Skyrim",
-        "icon": "puzzle",
-        "background": "7"
+        "background": "5"
     }
 ]

@@ -1,5 +1,16 @@
 .needHelp {
-    @apply rounded-lg bg-black-1f1f1f p-[0.875rem] mb-6;
+    @apply relative mb-6 rounded-lg bg-black-1f1f1f p-[0.875rem];
+
+    &:hover .hiddenWrapper {
+        @apply visible w-full bg-black-1f1f1f opacity-100;
+    }
+}
+
+.hiddenWrapper {
+    @apply invisible absolute bottom-0 left-0 rounded-lg opacity-0 -translate-y-9 px-[0.875rem] pt-[0.875rem];
+    transition:
+        opacity 150ms linear,
+        visibility 150ms linear;
 }
 
 .image {
@@ -7,7 +18,7 @@
 }
 
 .text {
-    @apply text-xs leading-[1.33] tracking-tight text-white pr-1 mb-[1.125rem];
+    @apply mb-[1.125rem] pr-1 text-xs leading-[1.33] tracking-tight text-white;
 
     &Green {
         @apply text-green;
@@ -18,12 +29,10 @@
     @apply flex items-center gap-2 outline-none;
 
     & .helpIcon {
-        @apply stroke-white fill-none w-5 h-5;
+        @apply h-5 w-5 fill-none stroke-white;
     }
 }
 
 .helpText {
-    @apply font-medium text-xs tracking-tight text-white;
+    @apply text-xs font-medium tracking-tight text-white;
 }
-
-

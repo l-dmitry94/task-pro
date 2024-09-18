@@ -2,7 +2,7 @@
     @apply cursor-auto;
 
     :global(.simplebar-track) {
-        @apply pointer-events-auto -right-4 w-3;
+        @apply pointer-events-auto left-0 w-2;
     }
 
     :global(.simplebar-scrollbar) {
