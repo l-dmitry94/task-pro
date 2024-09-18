@@ -28,7 +28,12 @@ const Boards = () => {
                                     variant={icon as IconVariants}
                                     className={clsx(scss.icon, isActive && scss.active)}
                                 />
-                                <p className={clsx(scss.title, isActive && scss.active)}>{name}</p>
+                                <p
+                                    title={name}
+                                    className={clsx(scss.title, isActive && scss.active)}
+                                >
+                                    {name}
+                                </p>
                             </div>
 
                             <div

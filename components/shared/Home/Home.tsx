@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import Drawer from 'react-modern-drawer';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
@@ -10,27 +10,21 @@ import scss from './Home.module.scss';
 
 const Home: FC<IHome> = ({ children }) => {
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const toggleSidebar = () => setSidebarIsOpen(!sidebarIsOpen);
 
     return (
         <section className={scss.wrapper}>
-            {mounted && (
-                <Drawer
-                    open={sidebarIsOpen}
-                    onClose={toggleSidebar}
-                    direction="left"
-                    size={225}
-                    className={scss.drawer}
-                >
-                    <Sidebar />
-                </Drawer>
-            )}
+            <Drawer
+                open={sidebarIsOpen}
+                onClose={toggleSidebar}
+                direction="left"
+                className={scss.drawer}
+                customIdSuffix="drawer"
+                lockBackgroundScroll
+            >
+                <Sidebar />
+            </Drawer>
 
             <section className={scss.content}>
                 <Header toggleSidebar={toggleSidebar} />

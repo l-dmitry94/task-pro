@@ -1,5 +1,3 @@
-'use client';
-
 import { FC } from 'react';
 import { useSession } from 'next-auth/react';
 import Container from '@/components/ui/Container';

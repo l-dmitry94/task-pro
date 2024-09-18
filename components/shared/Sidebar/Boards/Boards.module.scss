@@ -1,6 +1,11 @@
+@import "styles/mixins";
 
 .board {
     @apply flex items-center justify-between px-[0.875rem];
+
+    @include media-rules(tablet) {
+        @apply px-6;
+    }
 
     &.active {
         @apply relative bg-black-1f1f1f/40;

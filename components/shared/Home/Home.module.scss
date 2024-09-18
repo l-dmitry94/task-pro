@@ -1,8 +1,15 @@
+@import "styles/mixins";
+
 .wrapper {
     @apply h-[100dvh] -z-50 flex bg-black-1f1f1f;
 
     .drawer {
-        @apply h-full bg-black-121212;
+        @apply max-w-[225px] bg-black-121212;
+
+        @include media-rules(tablet) {
+            @apply max-w-[260px];
+            width: 100% !important;
+        }
     }
 }
 

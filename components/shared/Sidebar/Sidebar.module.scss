@@ -1,7 +1,17 @@
+@import "styles/mixins";
+
 .sidebar {
     @apply flex h-[100dvh] w-[225px] flex-col justify-between bg-black-121212 pb-6 pt-[0.875rem];
+
+    @include media-rules(tablet) {
+        @apply w-[260px] py-6;
+    }
 }
 
 .wrapper {
     @apply px-[0.875rem];
+
+    @include media-rules(tablet) {
+        @apply px-6;
+    }
 }
