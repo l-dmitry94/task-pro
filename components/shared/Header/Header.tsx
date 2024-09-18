@@ -7,8 +7,9 @@ import Icon from '@/components/ui/Icon';
 import ThemeSelect from './ThemeSelect';
 import UserInfo from './UserInfo';
 import scss from './Header.module.scss';
+import { IHeader } from './Header.types';
 
-const Header: FC = ({ toggleSidebar }) => {
+const Header: FC<IHeader> = ({ toggleSidebar }) => {
     const { data: session } = useSession();
 
     return (
