@@ -1,14 +1,14 @@
 'use client';
 import { FC } from 'react';
 import SimpleBar from 'simplebar-react';
+import clsx from 'clsx';
 import { IScrollBar } from './ScrollBar.types';
 import 'simplebar-react/dist/simplebar.min.css';
 import scss from './ScrollBar.module.scss';
-import clsx from 'clsx';
 
-const ScrollBar: FC<IScrollBar> = ({ children, maxHeight, maxWidth, className }) => {
+const ScrollBar: FC<IScrollBar> = ({ children, maxHeight, width, className }) => {
     return (
-        <SimpleBar style={{ maxHeight, maxWidth }} className={clsx(scss.simpleBar, className)}>
+        <SimpleBar style={{ maxHeight, width }} className={clsx(scss.simpleBar, className)}>
             {children}
         </SimpleBar>
     );

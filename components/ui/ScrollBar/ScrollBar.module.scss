@@ -7,7 +7,7 @@
 
     :global(.simplebar-scrollbar) {
         &::before {
-            @apply bg-green/50 opacity-100;
+            @apply bg-green/50;
         }
     }
 }
