@@ -1,6 +1,5 @@
 .sidebar {
-    @apply flex w-[225px] flex-col justify-between bg-black-121212 pb-6 pt-[0.875rem];
-    height: calc(var(--vh, 1vh) * 100);
+    @apply flex h-[100dvh] w-[225px] flex-col justify-between bg-black-121212 pb-6 pt-[0.875rem];
 }
 
 .wrapper {

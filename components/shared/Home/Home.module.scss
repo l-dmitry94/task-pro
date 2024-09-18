@@ -1,6 +1,6 @@
 .wrapper {
-    @apply -z-50 flex bg-black-1f1f1f;
-    height: calc(var(--vh, 1vh) * 100);
+    @apply h-[100dvh] -z-50 flex bg-black-1f1f1f;
+    // height: calc(var(--vh, 1vh) * 100);
 
     .drawer {
         @apply h-full bg-black-121212;
